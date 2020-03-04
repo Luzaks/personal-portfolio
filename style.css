@@ -58,9 +58,15 @@ header {
     bottom: 26px;
 }
 
+.logo-svg {
+    margin-left: 12.5%;
+    box-shadow: rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;
+    padding: 2px;
+}
+
 #span-wrapper {
     position: relative;
-    margin: 48px 0px 49px calc((100% - 980px) * 0.5);
+    margin: 48px 0px 49px 20px;
     left: 21px;
     grid-area: 1 / 1 / 2 / 2;
     justify-self: start;
@@ -82,7 +88,7 @@ main {
 
 ul {
     max-width: 1360px;
-    width: 75%;
+    width: 100%;
     background-color: white;
     box-shadow: 0 0 33px rgba(0, 0, 0, 0.48);
     margin: 151px auto 0;
@@ -105,11 +111,11 @@ ul {
     opacity: 0;
     z-index: 0;
 	-webkit-backface-visibility: hidden;
-    -webkit-animation: slide-animation 12s linear infinite 0s;
-    -moz-animation: slide-animation 12s linear infinite 0s;
-    -o-animation: slide-animation 12s linear infinite 0s;
-    -ms-animation: slide-animation 12s linear infinite 0s;
-    animation: slide-animation 12s linear infinite 0s;
+    -webkit-animation: slide-animation 20s linear infinite 0s;
+    -moz-animation: slide-animation 20s linear infinite 0s;
+    -o-animation: slide-animation 20s linear infinite 0s;
+    -ms-animation: slide-animation 20s linear infinite 0s;
+    animation: slide-animation 20s linear infinite 0s;
 }
 
 .slideshow li:nth-child(1) span { 
@@ -117,11 +123,11 @@ ul {
 }
 .slideshow li:nth-child(2) span {
     background-image: url("./images/project2.png");
-    -webkit-animation-delay: 6s;
-    -moz-animation-delay: 6s;
-    -o-animation-delay: 6s;
-    -ms-animation-delay: 6s;
-    animation-delay: 6s;
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    -o-animation-delay: 10s;
+    -ms-animation-delay: 10s;
+    animation-delay: 10s;
 }
 
 @-webkit-keyframes slide-animation { 
@@ -258,7 +264,7 @@ ul {
 
 .work-container {
     max-width: 1360px;
-    width: 75%;
+    width: 100%;
     background-color: white;
     box-shadow: 0 0 33px rgba(0, 0, 0, 0.48);
     margin: 0 auto;
@@ -333,6 +339,10 @@ footer {
     background: url("./images/developer.jpg") no-repeat center center;
     background-size: cover;
     border: 6px solid white;
+}
+
+.developer-presentation {
+    margin: 10px 0 0 -22px;
 }
 
 .information-contact {
