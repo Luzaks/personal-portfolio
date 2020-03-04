@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+body,
+html {
+    background-color: #E8E8E8;
+}
+
 header {
     width: 100%;
     background-color: black;
@@ -58,4 +63,54 @@ header {
     font-family: 'Monoton', cursive;
     font-size: 39px;
     line-height: 1.4em;
+}
+
+/* Main Section */
+
+main {
+    max-width: 1360px;
+    width: 75%;
+    background-color: white;
+    box-shadow: 0 0 33px rgba(0, 0, 0, 0.48);
+    margin: auto;
+    padding-top: 151px;
+}
+
+.slide-container {
+    max-width: 1360px;
+    width: 100%;
+    height: 625px;
+    margin: 0 auto ;
+    background: url("./project1.png");
+    background-size: cover;
+    animation: slide 20s infinite;
+    animation-timing-function: step-start;
+    transition: ;
+}
+
+@keyframes slide {
+    25% {
+        background: url("./project2.png");
+        background-size: cover;
+        transition-duration: 1s
+
+    }
+    50% {
+        background: url("./project1.png");
+        background-size: cover;
+        transition-duration: 1s
+
+    }
+    75% {
+        background: url("./project2.png");
+        background-size: cover;
+        transition-duration: 1s
+
+    }
+    100% {
+        background: url("./project1.png");
+        background-size: cover;
+        transition-duration: 1s
+
+    }
 }
