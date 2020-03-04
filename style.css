@@ -9,7 +9,7 @@ html {
     background-color: #E8E8E8;
     display: flex;
     width: 100%;
-    height: 2000px;
+    height: 3355px;
 }
 
 header {
@@ -81,7 +81,8 @@ header {
 
 main {
     width: 100%;
-    height: 73.3%;
+    height: 2690px; 
+    margin-top: 155px;
 }
 
 /*slideshow style */
@@ -91,7 +92,7 @@ ul {
     width: 100%;
     background-color: white;
     box-shadow: 0 0 33px rgba(0, 0, 0, 0.48);
-    margin: 151px auto 0;
+    margin:0 auto;
     position: absolute;
     list-style: none;
     z-index: 0;
@@ -259,7 +260,6 @@ ul {
     font-family: 'Russo One', sans-serif;
     font-size: 26px;
     color: white;
-    text-shadow: rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;
 }
 
 .work-container {
@@ -276,16 +276,45 @@ ul {
 
 .Work-section-header {
     width: 100%;
-    background-color: red;
-    color: black;
+    background-color: black;
+    color: white;
     height: 130px;
     font-family: 'Monoton', cursive;
     font-size: 42px;
+    text-shadow: rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;
 }
+
+.work-project-container {
+    width: 100%;
+    height: 470px;
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+    width: 45%;
+}
+
+.black {
+    background-color: transparent;
+    width: 55%;
+}
+
+.left-radius {
+    border-radius: 0 20px 20px 0;
+}
+
+.right-radius {
+    border-radius: 20px 0 0 20px;
+}
+
+
+
+/* Footer style */
 
 footer {
     width: 100%;
-    height: 26.8%;
+    height: 510px;
     background-color: #F9CE27;
     z-index: 3;
     box-shadow: 0 0 33px rgba(0, 0, 0, 0.48);
