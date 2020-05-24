@@ -61,7 +61,7 @@ html {
   background-color: $bg-color;
   display: flex;
   width: 100%;
-  height: 3485px;
+  height: 700vh;
 }
 
 header {
@@ -343,6 +343,7 @@ main {
           justify-content: center;
         }
         .span-about-me {
+          position: relative;
           font-family: 'Bebas', sans-serif;
           font-size: 35px;
           background: linear-gradient(to left,  #686868 60%, #585858 50%,#282828 7%);
@@ -361,6 +362,57 @@ main {
           display: flex;
           flex-direction: column;
           text-align: right;
+        }
+      }
+    }
+  }
+  .work-container {
+    width: 100%;
+    height: 400vh;
+    z-index: 4;
+    .work-project-container {
+      width: 100%;
+      height: 100vh;
+      z-index: 4;
+      .half-background {
+        width: 50%;
+        height: 100%;
+        border: 1px solid white;
+        padding: 15px;
+        .gallery-project {
+          width: 90%;
+          height: 50%;
+          z-index: 4;
+        }
+        .project-one {
+          background: url("./images/project3.png");
+          background-size: cover;
+        }
+        .project-two {
+          background: url("./images/project2.png");
+          background-size: cover;
+        }
+        .project-three {
+          background: url("./images/project1.jpg");
+          background-size: cover;
+        }
+        .project-four {
+          background: url("./images/project4.png");
+          background-size: cover;
+        }
+        .project-description {
+          color: white;
+          width: 95%;
+          height: 100%;
+          margin: 0;
+          .project-name {
+            position: absolute;
+            font-size: 30px;
+            letter-spacing: 0.1em;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 0.5px;
+            -webkit-text-stroke-color: white;
+          }
         }
       }
     }
