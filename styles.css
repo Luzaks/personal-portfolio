@@ -40,6 +40,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Cia Code";
+  src: url("./images/ttf/ciacode39_m.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -446,7 +452,6 @@ main .work-container .work-project-container {
 main .work-container .work-project-container .half-background {
   width: 50%;
   height: 100%;
-  border: 1px solid white;
   padding: 15px;
 }
 main .work-container .work-project-container .half-background .gallery-project {
@@ -477,12 +482,17 @@ main .work-container .work-project-container .half-background .project-descripti
   margin: 0;
 }
 main .work-container .work-project-container .half-background .project-description .project-name {
-  position: absolute;
-  font-size: 30px;
-  letter-spacing: 0.1em;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: white;
+  font-family: "Navada Outline", sans-serif;
+  font-size: 40px;
+}
+main .work-container .work-project-container .half-background .project-anchors {
+  margin-top: 15px;
+  font-family: "Cia Code", sans-serif;
+  font-size: 18px;
+  width: 100%;
+}
+main .work-container .work-project-container .half-background .project-anchors a {
+  color: white;
 }
 
 @keyframes textdescription {
@@ -601,7 +611,7 @@ main .work-container .work-project-container .half-background .project-descripti
 }
 
 .project-description a {
-  font-family: 'Libre Barcode 39 Text', cursive;
+  font-family: 'Cia Code', sans-serif;
   font-size: 18px;
   color: white;
 }
