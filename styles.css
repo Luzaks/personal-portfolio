@@ -34,6 +34,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Bebas";
+  src: url("./images/ttf/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -391,15 +397,47 @@ main .about-me-section-container .right-container .about-me-section-header-conta
 main .about-me-section-container .left-container {
   width: 70%;
   left: 100%;
+  z-index: 4;
 }
 main .about-me-section-container .left-container .about-me-section-description-container {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-around;
 }
+main .about-me-section-container .left-container .about-me-section-description-container .about-me-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+main .about-me-section-container .left-container .about-me-section-description-container .span-about-me {
+  font-family: "Bebas", sans-serif;
+  font-size: 35px;
+  background: linear-gradient(to left, #686868 60%, #585858 50%, #282828 7%);
+  background-size: 200% auto;
+  color: #fff;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textdescription 8.5s linear infinite;
+  display: inline-block;
+}
+main .about-me-section-container .left-container .about-me-section-description-container .stacks {
+  font-size: 30px;
+}
+main .about-me-section-container .left-container .about-me-section-description-container .about-me-bottom {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
 
+@keyframes textdescription {
+  to {
+    background-position: 200% center;
+  }
+}
 /*
 .work-container {
   max-width: 1360px;
