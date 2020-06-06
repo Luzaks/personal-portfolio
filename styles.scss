@@ -54,6 +54,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Rebelle';
+  src: url('./images/ttf/Manrope-Bold.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 $bg-color: black;
 $glitch-bg-color: $bg-color;
 
@@ -388,6 +395,7 @@ main {
         .gallery-project {
           width: 90%;
           height: 50%;
+          border-radius: 3px;
           z-index: 4;
         }
         .project-one {
@@ -407,7 +415,6 @@ main {
           background-size: cover;
         }
         .border {
-          content: '';
           position: relative;
           display: inline-block;
           top: -50%;
@@ -419,33 +426,55 @@ main {
           height: calc(50% + 4px);
           z-index: 2;
           filter: blur(50px);
-          animation: steam 20s linear infinite;
+          animation: steam 50s linear infinite;
         }
         .project-description {
-          color: white;
           width: 95%;
           height: 100%;
           margin: 0;
-          .project-name {
-            font-family: 'Navada Outline', sans-serif;
-            font-size: 40px;
+          color: #C8C8C8;
+          .div-project-name-container {
+            margin-top: 16.7%;
+            .project-name {
+              font-family: 'BrushKing', sans-serif;
+              font-size: 25px;
+              letter-spacing: 0.3rem;
+              margin: 0;
+            }
+            .project-stacks {
+              list-style: none;
+              margin-bottom: 0;
+              .project-stacks-li {
+                border-radius: 3px;
+                background-color: #C8C8C8;
+                color: black;
+                font-weight: bolder;
+                padding: 0 7px;
+                margin: 20px 7px;
+              }
+            }
+          }
+          .project-description-span {
+            font-family: 'Ugo', sans-serif;
+            text-transform: uppercase;
           }
         }
         .project-anchors {
           margin-top: -34.87%;
           font-family: 'Cia Code', sans-serif;
-          font-size: 18px;
+          font-size: 20px;
           width: 100%;
           a {
-            color: #C8C8C8;
+            color: rgb(53, 57, 61);
             display: inline-block;
 
           }
           a:hover {
-            font-family: 'Navada Regular', sans-serif;
+            font-family: 'BrushKing', sans-serif;
             text-transform: lowercase;
-            font-size: 20px;
-            letter-spacing: 0.3rem;
+            font-size: 12px;
+            letter-spacing: 0.1rem;
+            text-decoration: none;
           }
         }
       }

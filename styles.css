@@ -46,6 +46,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Rebelle";
+  src: url("./images/ttf/Manrope-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -457,6 +463,7 @@ main .work-container .work-project-container .half-background {
 main .work-container .work-project-container .half-background .gallery-project {
   width: 90%;
   height: 50%;
+  border-radius: 3px;
   z-index: 4;
 }
 main .work-container .work-project-container .half-background .project-one {
@@ -476,7 +483,6 @@ main .work-container .work-project-container .half-background .project-four {
   background-size: cover;
 }
 main .work-container .work-project-container .half-background .border {
-  content: "";
   position: relative;
   display: inline-block;
   top: -50%;
@@ -487,33 +493,55 @@ main .work-container .work-project-container .half-background .border {
   height: calc(50% + 4px);
   z-index: 2;
   filter: blur(50px);
-  animation: steam 20s linear infinite;
+  animation: steam 50s linear infinite;
 }
 main .work-container .work-project-container .half-background .project-description {
-  color: white;
   width: 95%;
   height: 100%;
   margin: 0;
+  color: #C8C8C8;
 }
-main .work-container .work-project-container .half-background .project-description .project-name {
-  font-family: "Navada Outline", sans-serif;
-  font-size: 40px;
+main .work-container .work-project-container .half-background .project-description .div-project-name-container {
+  margin-top: 16.7%;
+}
+main .work-container .work-project-container .half-background .project-description .div-project-name-container .project-name {
+  font-family: "BrushKing", sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.3rem;
+  margin: 0;
+}
+main .work-container .work-project-container .half-background .project-description .div-project-name-container .project-stacks {
+  list-style: none;
+  margin-bottom: 0;
+}
+main .work-container .work-project-container .half-background .project-description .div-project-name-container .project-stacks .project-stacks-li {
+  border-radius: 3px;
+  background-color: #C8C8C8;
+  color: black;
+  font-weight: bolder;
+  padding: 0 7px;
+  margin: 20px 7px;
+}
+main .work-container .work-project-container .half-background .project-description .project-description-span {
+  font-family: "Ugo", sans-serif;
+  text-transform: uppercase;
 }
 main .work-container .work-project-container .half-background .project-anchors {
   margin-top: -34.87%;
   font-family: "Cia Code", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   width: 100%;
 }
 main .work-container .work-project-container .half-background .project-anchors a {
-  color: #C8C8C8;
+  color: #35393d;
   display: inline-block;
 }
 main .work-container .work-project-container .half-background .project-anchors a:hover {
-  font-family: "Navada Regular", sans-serif;
+  font-family: "BrushKing", sans-serif;
   text-transform: lowercase;
-  font-size: 20px;
-  letter-spacing: 0.3rem;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
 }
 
 @keyframes textdescription {
