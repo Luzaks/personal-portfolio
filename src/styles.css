@@ -1,54 +1,54 @@
 @font-face {
   font-family: "BrushKing";
-  src: url("./images/ttf/BrushKing-MVVPp.otf") format("truetype");
+  src: url("../assets/ttf/BrushKing-MVVPp.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Navada Regular";
-  src: url("./images/ttf/NavadaDemo-2Ov2v.ttf") format("truetype");
+  src: url("../assets/ttf/NavadaDemo-2Ov2v.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Navada Outline";
-  src: url("./images/ttf/NavadaOutlineDemoOutline-lgx6d.ttf") format("truetype");
+  src: url("../assets/ttf/NavadaOutlineDemoOutline-lgx6d.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Ugo";
-  src: url("./images/ttf/UGO-COLOR.ttf") format("truetype");
+  src: url("../assets/ttf/UGO-COLOR.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Ugo Engreved";
-  src: url("./images/ttf/Delicious-KYry.ttf") format("truetype");
+  src: url("../assets/ttf/Delicious-KYry.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Henriete";
-  src: url("./images/ttf/HenrietteSignature-vmvM4.ttf") format("truetype");
+  src: url("../assets/ttf/HenrietteSignature-vmvM4.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Bebas";
-  src: url("./images/ttf/BebasNeue-Regular.ttf") format("truetype");
+  src: url("../assets/ttf/BebasNeue-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Cia Code";
-  src: url("./images/ttf/ciacode39_m.ttf") format("truetype");
+  src: url("../assets/ttf/ciacode39_m.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Rebelle";
-  src: url("./images/ttf/Manrope-Bold.ttf") format("truetype");
+  src: url("../assets/ttf/Manrope-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -64,6 +64,10 @@ html {
   display: flex;
   width: 100%;
   height: 700vh;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(225, 225, 225, 0.5) black;
+  overflow-x: hidden;
 }
 
 header {
@@ -395,7 +399,7 @@ main .about-me-section-container .right-container {
   width: 30%;
   height: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 main .about-me-section-container .right-container .about-me-section-header-container {
   width: fit-content;
@@ -432,6 +436,7 @@ main .about-me-section-container .left-container .about-me-section-description-c
   background-size: 200% auto;
   color: #fff;
   text-fill-color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textdescription 8.5s linear infinite;
@@ -467,19 +472,19 @@ main .work-container .work-project-container .half-background .gallery-project {
   z-index: 4;
 }
 main .work-container .work-project-container .half-background .project-one {
-  background: url("./images/project3.png");
+  background: url("../assets/project3.png");
   background-size: cover;
 }
 main .work-container .work-project-container .half-background .project-two {
-  background: url("./images/project2.png");
+  background: url("../assets/project2.png");
   background-size: cover;
 }
 main .work-container .work-project-container .half-background .project-three {
-  background: url("./images/project1.jpg");
+  background: url("../assets/project1.jpg");
   background-size: cover;
 }
 main .work-container .work-project-container .half-background .project-four {
-  background: url("./images/project4.png");
+  background: url("../assets/project4.png");
   background-size: cover;
 }
 main .work-container .work-project-container .half-background .border {
@@ -502,13 +507,13 @@ main .work-container .work-project-container .half-background .project-descripti
   color: #C8C8C8;
 }
 main .work-container .work-project-container .half-background .project-description .div-project-name-container {
-  margin-top: 16.7%;
+  margin-top: 18%;
 }
 main .work-container .work-project-container .half-background .project-description .div-project-name-container .project-name {
   font-family: "BrushKing", sans-serif;
-  font-size: 25px;
+  font-size: 38px;
   letter-spacing: 0.3rem;
-  margin: 0;
+  margin-bottom: 10px;
 }
 main .work-container .work-project-container .half-background .project-description .div-project-name-container .project-stacks {
   list-style: none;
@@ -520,11 +525,12 @@ main .work-container .work-project-container .half-background .project-descripti
   color: black;
   font-weight: bolder;
   padding: 0 7px;
-  margin: 20px 7px;
+  margin: 40px 7px;
 }
 main .work-container .work-project-container .half-background .project-description .project-description-span {
   font-family: "Ugo", sans-serif;
   text-transform: uppercase;
+  color: #A9A9A9;
 }
 main .work-container .work-project-container .half-background .project-anchors {
   margin-top: -34.87%;
@@ -588,7 +594,7 @@ main .work-container .work-project-container .half-background .project-anchors a
 .red {
   background-color: red;
   width: 45%;
-  background: url("./images/background2.svg") no-repeat;
+  background: url("./assets/background2.svg") no-repeat;
   background-size: cover;
   margin: 0 2.5%;
   height: 95%;
@@ -614,22 +620,22 @@ main .work-container .work-project-container .half-background .project-anchors a
   border-radius: 10px;
 }
 .project-one {
-  background: url("./images/project3.png");
+  background: url("./assets/project3.png");
   background-size: cover;
 }
 
 .project-two {
-  background: url("./images/project2.png");
+  background: url("./assets/project2.png");
   background-size: cover;
 }
 
 .project-three {
-  background: url("./images/project1.jpg");
+  background: url("./assets/project1.jpg");
   background-size: cover;
 }
 
 .project-four {
-  background: url("./images/project4.png");
+  background: url("./assets/project4.png");
   background-size: cover;
 }
 
@@ -770,7 +776,7 @@ footer {
   box-sizing: border-box;
   width: 100%;
   height: 70%;
-  background: url("./images/developer.jpg") no-repeat center center;
+  background: url("./assets/developer.jpg") no-repeat center center;
   background-size: cover;
   border: 6px solid white;
 }
