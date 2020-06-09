@@ -12,10 +12,15 @@ anime({
 
 anime({
     targets: '.half-background',
-    border: '100%', // -> from '28px' to '100%',
+    border: '100%',
     easing: 'easeInOutQuad',
     direction: 'alternate',
     loop: true
+});
+
+anime({
+    targets: '.small-scale',
+    scale: 0.8
 });
 
 const target = document.querySelector('.parallax');

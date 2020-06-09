@@ -63,7 +63,7 @@ html {
   background-color: black;
   display: flex;
   width: 100%;
-  height: 700vh;
+  height: 1100vh;
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: rgba(225, 225, 225, 0.5) black;
@@ -318,12 +318,12 @@ header .portfolio-presentation .description-container .description-elements:hove
 /* Main Section */
 main {
   width: 100%;
-  height: 600vh;
+  height: 1000vh;
 }
 main .line {
   position: absolute;
   width: 1px;
-  height: 600vh;
+  height: 1000vh;
   top: 0;
   left: 50%;
   background: rgba(255, 255, 255, 0.1);
@@ -384,7 +384,9 @@ main .about-me-container .developer-description .inner-dev-description {
   width: 100%;
   height: 100%;
 }
-main .about-me-container .developer-description .inner-dev-description .dev-u {
+main .about-me-container .developer-description .inner-dev-description .dev-u,
+main .about-me-container .developer-description .inner-dev-description .dev-fade,
+main .about-me-container .developer-description .inner-dev-description .small-scale {
   display: inline-block;
 }
 main .about-me-container .developer-description .inner-dev-description .dev-hinge {
@@ -496,7 +498,23 @@ main .work-container .work-project-container .half-background .project-three {
   background-size: cover;
 }
 main .work-container .work-project-container .half-background .project-four {
-  background: url("../assets/project4.png");
+  background: url("../assets/LeCourtier.png");
+  background-size: cover;
+}
+main .work-container .work-project-container .half-background .project-five {
+  background: url("../assets/landing-page.PNG");
+  background-size: cover;
+}
+main .work-container .work-project-container .half-background .project-six {
+  background: url("../assets/tic-tac-toe-javascript.png");
+  background-size: cover;
+}
+main .work-container .work-project-container .half-background .project-seven {
+  background: url("../assets/dodoist.png");
+  background-size: cover;
+}
+main .work-container .work-project-container .half-background .project-eight {
+  background: url("../assets/shooter.PNG");
   background-size: cover;
 }
 main .work-container .work-project-container .half-background .border {
