@@ -189,10 +189,13 @@ header {
       .description-elements {
         width: fit-content;
         margin: 0 15px;
-        display: flex;
         align-items: center;
         font: 14px 'Ugo';
         color: #d2d13e;
+        display: inline-flex;
+        animation: flipInX;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
         svg {
           display: block;
           font: 45px 'Montserrat';
@@ -313,6 +316,15 @@ main {
         list-style: none;
         width: 100%;
         height: 100%;
+        .dev-u {
+          display: inline-block;
+        }
+        .dev-hinge {
+          display: inline-block;
+          animation: jello;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+        }
         .elem-dev-description {
           width: fit-content;
           font: 95px 'Ugo Engreved';

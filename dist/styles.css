@@ -261,10 +261,13 @@ header .portfolio-presentation .description-container {
 header .portfolio-presentation .description-container .description-elements {
   width: fit-content;
   margin: 0 15px;
-  display: flex;
   align-items: center;
   font: 14px "Ugo";
   color: #d2d13e;
+  display: inline-flex;
+  animation: flipInX;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
 }
 header .portfolio-presentation .description-container .description-elements svg {
   display: block;
@@ -380,6 +383,15 @@ main .about-me-container .developer-description .inner-dev-description {
   list-style: none;
   width: 100%;
   height: 100%;
+}
+main .about-me-container .developer-description .inner-dev-description .dev-u {
+  display: inline-block;
+}
+main .about-me-container .developer-description .inner-dev-description .dev-hinge {
+  display: inline-block;
+  animation: jello;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 main .about-me-container .developer-description .inner-dev-description .elem-dev-description {
   width: fit-content;

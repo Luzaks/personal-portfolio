@@ -6,9 +6,13 @@
         type="image/png" 
         href="../assets/flame-4.png">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="main.js" defer></script>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+        />
         <link rel="stylesheet" href="styles.css">
+        <script src="main.js" defer></script>
     </head>
     <body class="d-flex flex-column align-items-center justify-content-start">
         <!-- Header section -->
@@ -20,13 +24,13 @@
             </div>
             <div class="portfolio-presentation">
                     <ul class="description-container">
-                        <li data-lax-present="slalom" class="lax description-elements">
+                        <li data-aos="zoom-in" class="description-elements">
                             ABOUT
                         </li>
-                        <li class="description-elements">
+                        <li data-aos="zoom-in" class="description-elements">
                             WORK
                         </li>
-                        <li class="description-elements">
+                        <li data-aos="zoom-in" class="description-elements">
                             CONTACT
                         </li>
                     </ul>
@@ -43,11 +47,27 @@
                 </div>
 
                 <div class="developer-description">
-                    <ul class="inner-dev-description d-flex flex-column align-items-end justify-content-center">
-                        <li class="elem-dev-description">GUADALUPE</li>
-                        <li class="elem-dev-description">RANGEL</li>
-                        <li class="elem-dev-description">FULL-STACK</li>
-                        <li class="elem-dev-description">DEVELOPER</li>
+                    <ul data-scroll-container class="inner-dev-description d-flex flex-column align-items-end justify-content-center">
+                        <li class="elem-dev-description"><p class="dev-u" data-aos="flip-up"
+                                                            data-aos-delay="10"
+                                                            data-aos-duration="100"
+                                                            data-aos-easing="ease-in-out"
+                                                            data-aos-mirror="true">G</p>UA<p class="dev-u" data-aos="flip-up"
+                                                                                             data-aos-delay="10"
+                                                                                             data-aos-duration="100"
+                                                                                             data-aos-easing="ease-in-out"
+                                                                                             data-aos-mirror="true">D</p>A<p data-lax-preset="fadeInOut" class="dev-u lax">L</p>UPE</li>
+                        <li class="elem-dev-description dev-lastname">RA<p data-lax-preset="fadeInOut" class="dev-u lax">N</p>GEL</li>
+                        <li class="elem-dev-description">FU<p data-lax-preset="fadeInOut" class="dev-u lax">L</p>L-STA<p class="dev-u" data-aos="flip-up"
+                                                                                                                         data-aos-delay="10"
+                                                                                                                         data-aos-duration="100"
+                                                                                                                         data-aos-easing="ease-in-out"
+                                                                                                                         data-aos-mirror="true">C</p>K</li>
+                        <li class="elem-dev-description">DE<p data-lax-preset="fadeInOut" class="dev-u lax">V</p>EL<p class="dev-u" data-aos="flip-up"
+                                                                                                                      data-aos-delay="10"
+                                                                                                                      data-aos-duration="100"
+                                                                                                                      data-aos-easing="ease-in-out"
+                                                                                                                      data-aos-mirror="true">O</p>PE<p data-lax-preset="fadeInOut" class="dev-u lax">R</p></li>
                     </ul>
                 </div>
             </div>
@@ -63,18 +83,14 @@
 
                 <div class="left-container">
                     <div class="about-me-section-description-container">
-                        <div data-aos="zoom-in"
-                             data-aos-delay="150"
-                             data-aos-duration="1000"
-                             data-aos-easing="ease-in-out"
-                             data-aos-mirror="true" class="about-me-top">
+                        <div data-lax-opacity="0 1, 200 100, 100 0 | loop=400 offset=100 speed=7" class="lax about-me-top">
                             <span class="span-about-me">Hello there!</span>
                             <span class="span-about-me">I’m Guadalupe, a full-stack developer with a tech background in physics.</span>
                             <span class="span-about-me">In the university I worked in several projects related to computer science and programming, eventually, I started to love coding and I am interested in motion web design. </span>
                         </div>
                         <div class="about-me-bottom">
-                            <span class="span-about-me stacks"> HTML5 - CSS3 - JavaScript - Ruby - RoR - React.js </span>
-                            <span class="span-about-me stacks"> RSpec - Jest - Git</span>
+                            <span data-lax-opacity="0 1, 200 100, 100 0 | loop=400 offset=100 speed=7" class="lax span-about-me stacks"> HTML5 - CSS3 - JavaScript - Ruby - RoR - React.js </span>
+                            <span data-lax-opacity="0 1, 200 100, 100 0 | loop=400 offset=100 speed=7" class="lax span-about-me stacks"> RSpec - Jest - Git</span>
                         </div>
                     </div>
                 </div>
@@ -83,7 +99,7 @@
             <section class="work-container">
                 <div class="work-project-container d-flex">
                     <div  class="half-background red left-radius d-flex flex-column align-items-center justify-content-center">
-                        <div data-aos="zoom-in"
+                        <div data-aos="fade-right"
                              data-aos-delay="50"
                              data-aos-duration="1000"
                              data-aos-easing="ease-in-out"
@@ -94,19 +110,35 @@
                              data-aos-easing="ease-in-out"
                              data-aos-mirror="true" class="border"></div>
                         <div class="project-anchors d-flex justify-content-around align-items-center">
-                            <a href="https://github.com/Luzaks/facebook-clone">
+                            <a data-aos="flip-up"
+                               data-aos-delay="800"
+                               data-aos-duration="800"
+                               data-aos-easing="ease-in-out"
+                               data-aos-mirror="true" href="https://github.com/Luzaks/facebook-clone">
                                 GITHUB
                             </a>
-                            <a href="https://young-fortress-61632.herokuapp.com/" class="d-flex align-items-end justify-content-center">
+                            <a data-aos="flip-up"
+                               data-aos-delay="800"
+                               data-aos-duration="800"
+                               data-aos-easing="ease-in-out"
+                               data-aos-mirror="true" href="https://young-fortress-61632.herokuapp.com/" class="d-flex align-items-end justify-content-center">
                                 LIVE DEMO
                             </a>
                         </div>
                     </div>
-                    <div data-lax-preset="driftRight"  class="lax half-background black d-flex flex-column align-items-center justify-content-center">
+                    <div class="half-background black d-flex flex-column align-items-center justify-content-center">
                         <div class="project-description d-flex flex-column align-items-start justify-content-start">
                             <div class="div-project-name-container d-flex flex-column align-items-start">
-                                <h6 class="project-name d-flex align align-items-center justify-content-center">Falsebook</h6>
-                                <ul class="project-stacks d-flex align align-items-center justify-content-center">
+                                <h6 data-aos="fade-left"
+                                    data-aos-delay="70"
+                                    data-aos-duration="700"
+                                    data-aos-easing="ease-in-out"
+                                    data-aos-mirror="true" class="project-name d-flex align align-items-center justify-content-center">Falsebook</h6>
+                                <ul data-aos="fade-left"
+                                    data-aos-delay="400"
+                                    data-aos-duration="700"
+                                    data-aos-easing="ease-in-out"
+                                    data-aos-mirror="true" class="project-stacks d-flex align align-items-center justify-content-center">
                                     <li class="project-stacks-li">Ruby on Rails</li>
                                     <li class="project-stacks-li">RSpec</li>
                                     <li class="project-stacks-li">Back End</li>
@@ -115,19 +147,27 @@
                                 </ul>
                             </div>
                             <br>
-                            <span data-lax-opacity="0 1, 200 100, 100 0 | loop=400 offset=100 speed=7" class="lax project-description-span ">
+                            <span data-aos="fade-left"
+                                  data-aos-delay="800"
+                                  data-aos-duration="700"
+                                  data-aos-easing="ease-in-out"
+                                  data-aos-mirror="true" class="project-description-span ">
                                 Also known as the final step for Ruby on Rails course.<br>
                                 A large portion of popular social media was replicated.<br>
                             </span>
                             <br>
-                            <span data-lax-opacity="0 1, 200 100, 100 0 | loop=400 offset=100 speed=7" class="lax project-description-span ">
+                            <span data-aos="fade-left"
+                                  data-aos-delay="800"
+                                  data-aos-duration="700"
+                                  data-aos-easing="ease-in-out"
+                                  data-aos-mirror="true" class="lax project-description-span ">
                                 You can sign-up, write posts, comments, give and receive likes,
                                 and for sure, you can add more friends!<br>
                                 Log in and give it a time!<br><br>
                             </span>
 
                             <img data-aos="flip-right"
-                                 data-aos-delay="150"
+                                 data-aos-delay="1200"
                                  data-aos-duration="1000"
                                  data-aos-easing="ease-in-out"
                                  data-aos-mirror="true" class="project-image-link" style="width: 60px; height: 60px" src="../assets/circles-brackground.svg" alt="link">
@@ -135,11 +175,23 @@
                     </div>
                 </div>
                 <div class="work-project-container d-flex">
-                    <div data-lax-preset="driftLeft" class="lax half-background black d-flex flex-column align-items-center justify-content-center">
+                    <div data-aos="fade-right"
+                         data-aos-delay="50"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-out"
+                         data-aos-mirror="true" class="lax half-background black d-flex flex-column align-items-center justify-content-center">
                         <div class="project-description text-right d-flex flex-column align-items-end justify-content-start">
                             <div class="div-project-name-container d-flex flex-column justify-content-end">
-                                <h6 class="project-name d-flex align align-items-center justify-content-end">Newsweek</h6>
-                                <ul class="project-stacks d-flex align align-items-center justify-content-center">
+                                <h6 data-aos="fade-right"
+                                    data-aos-delay="70"
+                                    data-aos-duration="700"
+                                    data-aos-easing="ease-in-out"
+                                    data-aos-mirror="true" class="project-name d-flex align align-items-center justify-content-end">Newsweek</h6>
+                                <ul data-aos="fade-right"
+                                    data-aos-delay="400"
+                                    data-aos-duration="700"
+                                    data-aos-easing="ease-in-out"
+                                    data-aos-mirror="true" class="project-stacks d-flex align align-items-center justify-content-center">
                                     <li class="project-stacks-li">Bootstrap</li>
                                     <li class="project-stacks-li">HTML</li>
                                     <li class="project-stacks-li">CSS</li>
@@ -147,27 +199,35 @@
                                 </ul>
                             </div>
                             <br>
-                            <span data-lax-opacity="0 1, 200 100, 100 0 | loop=400 offset=100 speed=7" class="lax project-description-span">
+                            <span data-aos="fade-right"
+                                  data-aos-delay="800"
+                                  data-aos-duration="700"
+                                  data-aos-easing="ease-in-out"
+                                  data-aos-mirror="true" class="project-description-span">
                                 Specifically looking this project?
                                 <br>
                                 Well, it's a brief show of what Bootstrap can do.
                             </span>
                             <br>
-                            <span data-lax-opacity="0 1, 200 100, 100 0 | loop=400 offset=100 speed=7" class="lax project-description-span">
+                            <span data-aos="fade-right"
+                                  data-aos-delay="800"
+                                  data-aos-duration="700"
+                                  data-aos-easing="ease-in-out"
+                                  data-aos-mirror="true" class="project-description-span">
                                 It's grid and media queries functionalities
                                 <br>
                                 were applied for building this page.
                                 <br><br>
                             </span>
                             <img data-aos="flip-right"
-                                 data-aos-delay="150"
+                                 data-aos-delay="1200"
                                  data-aos-duration="1000"
                                  data-aos-easing="ease-in-out"
                                  data-aos-mirror="true" class="project-image-link" style="width: 60px; height: 60px" src="../assets/circles-brackground.svg" alt="link">
                         </div>
                     </div>
                     <div class="half-background red right-radius d-flex flex-column align-items-center justify-content-center">
-                        <div data-aos="zoom-in"
+                        <div data-aos="fade-left"
                              data-aos-delay="50"
                              data-aos-duration="1000"
                              data-aos-easing="ease-in-out"
@@ -178,10 +238,18 @@
                              data-aos-easing="ease-in-out"
                              data-aos-mirror="true" class="border"></div>
                         <div class="project-anchors d-flex justify-content-around align-items-center">
-                            <a href="https://luzaks.github.io/Bootstrap/" class="d-flex align-items-end justify-content-center">
+                            <a data-aos="flip-up"
+                               data-aos-delay="800"
+                               data-aos-duration="800"
+                               data-aos-easing="ease-in-out"
+                               data-aos-mirror="true" href="https://luzaks.github.io/Bootstrap/" class="d-flex align-items-end justify-content-center">
                                 LIVE DEMO
                             </a>
-                            <a href="https://github.com/Luzaks/Bootstrap" >
+                            <a data-aos="flip-up"
+                               data-aos-delay="800"
+                               data-aos-duration="800"
+                               data-aos-easing="ease-in-out"
+                               data-aos-mirror="true" href="https://github.com/Luzaks/Bootstrap" >
                                 GITHUB
                             </a>
                         </div>
@@ -189,7 +257,7 @@
                 </div>
                 <div class="work-project-container d-flex">
                     <div class="half-background red left-radius d-flex flex-column align-items-center justify-content-center">
-                        <div data-aos="zoom-in"
+                        <div data-aos="fade-right"
                              data-aos-delay="50"
                              data-aos-duration="1000"
                              data-aos-easing="ease-in-out"
@@ -200,26 +268,50 @@
                              data-aos-easing="ease-in-out"
                              data-aos-mirror="true" class="border"></div>
                         <div class="project-anchors d-flex justify-content-around align-items-center">
-                            <a href="https://github.com/Luzaks/Capstone-Project">
+                            <a data-aos="flip-up"
+                               data-aos-delay="800"
+                               data-aos-duration="800"
+                               data-aos-easing="ease-in-out"
+                               data-aos-mirror="true"  href="https://github.com/Luzaks/Capstone-Project">
                                 GITHUB
                             </a>
-                            <a href="https://luzaks.github.io/Capstone-Project/" class="d-flex align-items-end justify-content-center">
+                            <a data-aos="flip-up"
+                               data-aos-delay="800"
+                               data-aos-duration="800"
+                               data-aos-easing="ease-in-out"
+                               data-aos-mirror="true"  href="https://luzaks.github.io/Capstone-Project/" class="d-flex align-items-end justify-content-center">
                                 LIVE DEMO
                             </a>
                         </div>
                     </div>
-                    <div data-lax-preset="driftRight" class="lax half-background black d-flex flex-column align-items-center justify-content-center">
+                    <div data-aos="fade-left"
+                         data-aos-delay="50"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-out"
+                         data-aos-mirror="true" class="lax half-background black d-flex flex-column align-items-center justify-content-center">
                         <div class="project-description d-flex flex-column align-items-start justify-content-start">
                             <div class="div-project-name-container d-flex flex-column align-items-start">
-                                <h6 class="project-name d-flex align align-items-center justify-content-center">Swipex</h6>
-                                <ul class="project-stacks d-flex align align-items-center justify-content-center">
+                                <h6 data-aos="fade-left"
+                                    data-aos-delay="70"
+                                    data-aos-duration="700"
+                                    data-aos-easing="ease-in-out"
+                                    data-aos-mirror="true" class="project-name d-flex align align-items-center justify-content-center">Swipex</h6>
+                                <ul data-aos="fade-left"
+                                    data-aos-delay="400"
+                                    data-aos-duration="700"
+                                    data-aos-easing="ease-in-out"
+                                    data-aos-mirror="true" class="project-stacks d-flex align align-items-center justify-content-center">
                                     <li class="project-stacks-li">Capstone Project</li>
                                     <li class="project-stacks-li">HTML</li>
                                     <li class="project-stacks-li">CSS</li>
                                     <li class="project-stacks-li">Web Design</li>
                                 </ul>
                             </div>
-                            <span data-lax-opacity="0 1, 200 100, 100 0 | loop=400 offset=100 speed=7" class="lax project-description-span">
+                            <span data-aos="fade-left"
+                                  data-aos-delay="800"
+                                  data-aos-duration="700"
+                                  data-aos-easing="ease-in-out"
+                                  data-aos-mirror="true" class="project-description-span">
                                 A Capstone Project built as an original proposal<br>
                                 for a Social Media Design.<br>
                                 <br>
@@ -229,8 +321,8 @@
                                 Like in and enjoy it!
                                 <br><br>
                             </span>
-                            <img data-aos="flip-right"
-                                 data-aos-delay="150"
+                            <img data-aos="flip-left"
+                                 data-aos-delay="1200"
                                  data-aos-duration="1000"
                                  data-aos-easing="ease-in-out"
                                  data-aos-mirror="true" class="project-image-link" style="width: 60px; height: 60px" src="../assets/circles-brackground.svg" alt="link">
@@ -238,17 +330,29 @@
                     </div>
                 </div>
                 <div class="work-project-container d-flex">
-                    <div data-lax-preset="driftLeft" class="lax half-background black d-flex flex-column align-items-center justify-content-center">
+                    <div class="half-background black d-flex flex-column align-items-center justify-content-center">
                         <div class="project-description text-right d-flex flex-column align-items-end justify-content-start">
                             <div class="div-project-name-container d-flex flex-column align-items-end">
-                                <h6 class="project-name d-flex align align-items-center justify-content-center">Tic-Tac-Toe</h6>
-                                <ul class="lax project-stacks d-flex align align-items-center justify-content-center">
+                                <h6 data-aos="fade-right"
+                                    data-aos-delay="70"
+                                    data-aos-duration="700"
+                                    data-aos-easing="ease-in-out"
+                                    data-aos-mirror="true" class="project-name d-flex align align-items-center justify-content-center">Tic-Tac-Toe</h6>
+                                <ul data-aos="fade-right"
+                                    data-aos-delay="400"
+                                    data-aos-duration="700"
+                                    data-aos-easing="ease-in-out"
+                                    data-aos-mirror="true" class="lax project-stacks d-flex align align-items-center justify-content-center">
                                     <li class="project-stacks-li">Ruby</li>
                                     <li class="project-stacks-li">RSpec</li>
                                     <li class="project-stacks-li">Back End</li>
                                 </ul>
                             </div>
-                            <span data-lax-opacity="0 1, 200 100, 100 0 | loop=400 offset=100 speed=7" class="lax project-description-span">
+                            <span data-aos="fade-right"
+                                  data-aos-delay="800"
+                                  data-aos-duration="700"
+                                  data-aos-easing="ease-in-out"
+                                  data-aos-mirror="true" class="project-description-span">
                                 Are you bored? This Ruby executable can help you.<br>
                                 You can play with a friend in your computer and have a good time.<br>
                                 <br>
@@ -258,14 +362,14 @@
 
                             </span>
                             <img data-aos="flip-right"
-                                 data-aos-delay="150"
+                                 data-aos-delay="1200"
                                  data-aos-duration="1000"
                                  data-aos-easing="ease-in-out"
                                  data-aos-mirror="true" class="project-image-link" style="width: 60px; height: 60px" src="../assets/circles-brackground.svg" alt="link">
                         </div>
                     </div>
                     <div class="half-background red right-radius d-flex flex-column align-items-center justify-content-center">
-                        <div data-aos="zoom-in"
+                        <div data-aos="fade-left"
                         data-aos-delay="50"
                         data-aos-duration="1000"
                         data-aos-easing="ease-in-out"
@@ -276,10 +380,18 @@
                              data-aos-easing="ease-in-out"
                              data-aos-mirror="true" class="border"></div>
                         <div class="project-anchors d-flex justify-content-around align-items-center">
-                            <a href="https://github.com/Luzaks/tic-tac-toe" class="d-flex align-items-end justify-content-center">
+                            <a data-aos="flip-up"
+                               data-aos-delay="800"
+                               data-aos-duration="800"
+                               data-aos-easing="ease-in-out"
+                               data-aos-mirror="true" href="https://github.com/Luzaks/tic-tac-toe" class="d-flex align-items-end justify-content-center">
                                 FORK REPO
                             </a>
-                            <a href="https://github.com/Luzaks/tic-tac-toe">
+                            <a data-aos="flip-up"
+                               data-aos-delay="800"
+                               data-aos-duration="800"
+                               data-aos-easing="ease-in-out"
+                               data-aos-mirror="true" href="https://github.com/Luzaks/tic-tac-toe">
                                 GITHUB
                             </a>
                         </div>
