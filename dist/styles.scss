@@ -61,6 +61,10 @@
   font-style: normal;
 }
 
+@mixin rect($top, $bottom) {
+  clip: rect($top, 9999px, $bottom, 0);
+}
+
 $bg-color: black;
 $glitch-bg-color: $bg-color;
 
@@ -80,6 +84,44 @@ html {
   scrollbar-width: thin;
   scrollbar-color: rgba(225, 225, 225, 0.5) black;
   overflow-x: hidden;
+}
+
+body {
+  .line {
+    position: absolute;
+    width: 1px;
+    height: 1100vh;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    overflow: hidden;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 15vh;
+      width: 100%;
+      top: -50%;
+      left: 0;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+      animation: stars 25s 0s infinite;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier( 0.93, 0.97, 0.93, 0.97 );
+    }
+    &:nth-child(1) {
+      margin-left: -25%;
+      &::after {
+        animation-delay: 2s
+      }
+    }
+    &:nth-child(3) {
+      margin-left: 25%;
+      &::after{
+        animation-delay: 2.5s;
+      }
+    }
+  }
 }
 
 header {
@@ -127,55 +169,6 @@ header {
       background: $glitch-bg-color;
       color: #3d077a;
     }
-    @mixin rect($top, $bottom) {
-      clip: rect($top, 9999px, $bottom, 0);
-    }
-    @keyframes glitch-animation {
-      0% { @include rect(42px, 50px); }
-      5% { @include rect(12px, 65px); }
-      10% { @include rect(48px, 35px); }
-      15.0% { @include rect(42px, 79px); }
-      20% { @include rect(63px, 33px); }
-      25% { @include rect(34px, 61px); }
-      30.0% { @include rect(86px, 79px); }
-      35% { @include rect(20px, 26px); }
-      40% { @include rect(26px, 66px); }
-      45% { @include rect(25px, 72px); }
-      50% { @include rect(57px, 104px); }
-      55.0% { @include rect(5px, 52px); }
-      60.0% { @include rect(82px, 37px); }
-      65% { @include rect(54px, 27px); }
-      70% { @include rect(28px, 105px); }
-      75% { @include rect(45px, 75px); }
-      80% { @include rect(23px, 91px); }
-      85.0% { @include rect(54px, 90px); }
-      90% { @include rect(45px, 53px); }
-      95% { @include rect(37px, 26px); }
-      100% { @include rect(4px, 97px); }
-    }
-    @keyframes glitch-animation-2 {
-      0% { @include rect(65px, 106px); }
-      5% { @include rect(52px, 80px); }
-      10% { @include rect(79px, 91px); }
-      15.0% { @include rect(75px, 11px); }
-      20% { @include rect(67px, 67px); }
-      25% { @include rect(14px, 85px); }
-      30.0% { @include rect(1px, 72px); }
-      35% { @include rect(86px, 36px); }
-      40% { @include rect(23px, 104px); }
-      45% { @include rect(85px, 78px); }
-      50% { @include rect(71px, 81px); }
-      55.0% { @include rect(2px, 54px); }
-      60.0% { @include rect(30px, 22px); }
-      65% { @include rect(59px, 56px); }
-      70% { @include rect(41px, 68px); }
-      75% { @include rect(2px, 88px); }
-      80% { @include rect(47px, 79px); }
-      85.0% { @include rect(3px, 33px); }
-      90% { @include rect(26px, 61px); }
-      95% { @include rect(42px, 103px); }
-      100% { @include rect(38px, 55px); }
-    }
   }
   .portfolio-presentation {
     width: 50%;
@@ -196,50 +189,6 @@ header {
         animation: flipInX;
         animation-duration: 1s;
         animation-iteration-count: 1;
-        svg {
-          display: block;
-          font: 45px 'Montserrat';
-          width: 192px;
-          height: 66px;
-          margin: 0 auto;
-        }
-        .text-copy {
-          fill: none;
-          stroke: white;
-          stroke-dasharray: 6% 29%;
-          stroke-width: 1px;
-          stroke-dashoffset: 0;
-          animation: stroke-offset 5.5s infinite linear;
-        }
-
-        .text-copy:nth-child(1){
-          stroke: #4D163D;
-          animation-delay: -1;
-        }
-
-        .text-copy:nth-child(2){
-          stroke: #840037;
-          animation-delay: -2s;
-        }
-
-        .text-copy:nth-child(3){
-          stroke: #BD0034;
-          animation-delay: -3s;
-        }
-
-        .text-copy:nth-child(4){
-          stroke: #BD0034;
-          animation-delay: -4s;
-        }
-
-        .text-copy:nth-child(5){
-          stroke: #FDB731;
-          animation-delay: -5s;
-        }
-
-        @keyframes stroke-offset{
-          100% {stroke-dashoffset: -35%;}
-        }
         &:hover {
           font-family: 'BrushKing', cursive;
           font-size: 12px;
@@ -255,41 +204,6 @@ header {
 main {
   width: 100%;
   height: 1000vh;
-  .line {
-    position: absolute;
-    width: 1px;
-    height: 1000vh;
-    top: 0;
-    left: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    z-index: 0;
-    overflow: hidden;
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      height: 15vh;
-      width: 100%;
-      top: -50%;
-      left: 0;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-      animation: stars 25s 0s infinite;
-      animation-fill-mode: forwards;
-      animation-timing-function: cubic-bezier( 0.93, 0.97, 0.93, 0.97 );
-    }
-    &:nth-child(1) {
-      margin-left: -25%;
-      &::after {
-        animation-delay: 2s
-      }
-    }
-    &:nth-child(3) {
-      margin-left: 25%;
-      &::after{
-        animation-delay: 2.5s;
-      }
-    }
-  }
   .about-me-container {
     width: 100%;
     padding: 0 40px;
@@ -412,41 +326,41 @@ main {
         height: 100%;
         padding: 15px;
         .gallery-project {
-          width: 90%;
-          height: 50%;
+          width: 582px;
+          height: 312px;
           border-radius: 3px;
           z-index: 4;
         }
         .project-one {
-          background: url("../assets/project3.png");
+          background: url("../assets/project3.png") no-repeat top center;
           background-size: cover;
         }
         .project-two {
-          background: url("../assets/project2.png");
+          background: url("../assets/project2.png") no-repeat top center;
           background-size: cover;
         }
         .project-three {
-          background: url("../assets/project1.jpg");
+          background: url("../assets/project1.jpg") no-repeat top center;
           background-size: cover;
         }
         .project-four {
-          background: url("../assets/LeCourtier.png");
+          background: url("../assets/project6.png") no-repeat top center;
           background-size: cover;
         }
         .project-five {
-          background: url("../assets/landing-page.PNG");
+          background: url("../assets/project8.PNG") no-repeat top center;
           background-size: cover;
         }
         .project-six {
-          background: url("../assets/tic-tac-toe-javascript.png");
+          background: url("../assets/project4.png") no-repeat top center;
           background-size: cover;
         }
         .project-seven {
-          background: url("../assets/dodoist.png");
+          background: url("../assets/project5.png") no-repeat top center;
           background-size: cover;
         }
         .project-eight {
-          background: url("../assets/shooter.PNG");
+          background: url("../assets/project7.JPG") no-repeat top center;
           background-size: cover;
         }
         .border {
@@ -517,6 +431,63 @@ main {
     }
   }
 }
+
+@keyframes stars {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes glitch-animation {
+  0% { @include rect(42px, 50px); }
+  5% { @include rect(12px, 65px); }
+  10% { @include rect(48px, 35px); }
+  15.0% { @include rect(42px, 79px); }
+  20% { @include rect(63px, 33px); }
+  25% { @include rect(34px, 61px); }
+  30.0% { @include rect(86px, 79px); }
+  35% { @include rect(20px, 26px); }
+  40% { @include rect(26px, 66px); }
+  45% { @include rect(25px, 72px); }
+  50% { @include rect(57px, 104px); }
+  55.0% { @include rect(5px, 52px); }
+  60.0% { @include rect(82px, 37px); }
+  65% { @include rect(54px, 27px); }
+  70% { @include rect(28px, 105px); }
+  75% { @include rect(45px, 75px); }
+  80% { @include rect(23px, 91px); }
+  85.0% { @include rect(54px, 90px); }
+  90% { @include rect(45px, 53px); }
+  95% { @include rect(37px, 26px); }
+  100% { @include rect(4px, 97px); }
+}
+@keyframes glitch-animation-2 {
+  0% { @include rect(65px, 106px); }
+  5% { @include rect(52px, 80px); }
+  10% { @include rect(79px, 91px); }
+  15.0% { @include rect(75px, 11px); }
+  20% { @include rect(67px, 67px); }
+  25% { @include rect(14px, 85px); }
+  30.0% { @include rect(1px, 72px); }
+  35% { @include rect(86px, 36px); }
+  40% { @include rect(23px, 104px); }
+  45% { @include rect(85px, 78px); }
+  50% { @include rect(71px, 81px); }
+  55.0% { @include rect(2px, 54px); }
+  60.0% { @include rect(30px, 22px); }
+  65% { @include rect(59px, 56px); }
+  70% { @include rect(41px, 68px); }
+  75% { @include rect(2px, 88px); }
+  80% { @include rect(47px, 79px); }
+  85.0% { @include rect(3px, 33px); }
+  90% { @include rect(26px, 61px); }
+  95% { @include rect(42px, 103px); }
+  100% { @include rect(38px, 55px); }
+}
+
 @keyframes textdescription {
   to {
     background-position: 200% center;
@@ -531,279 +502,5 @@ main {
   }
   100% {
     background-position: 0 0;
-  }
-}
-
-/*
-.work-container {
-  max-width: 1360px;
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 0 33px rgba(0, 0, 0, 0.48);
-  margin: 0 auto;
-  z-index: 2;
-  height: 400vh;
-  position: absolute;
-  top: 860px;
-
-}
-
-.work-project-container {
-  width: 100%;
-  height: 470px;
-  background-color: black;
-  border-bottom: 2px dashed white;
-}
-
-.half-background {
-  padding: 15px;
-}
-
-.red {
-  background-color: red;
-  width: 45%;
-  background: url("./assets/background2.svg") no-repeat;
-  background-size: cover;
-  margin: 0 2.5%;
-  height: 95%;
-}
-
-.black {
-  background-color: transparent;
-  width: 55%;
-}
-
-.left-radius {
-  border-radius: 0 20px 20px 0;
-}
-
-.right-radius {
-  border-radius: 20px 0 0 20px;
-}
-
-.gallery-project {
-  width: 420px;
-  height: 240px;
-  border: 15px solid black;
-  border-radius: 10px;
-}
-.project-one {
-  background: url("./assets/project3.png");
-  background-size: cover;
-}
-
-.project-two {
-  background: url("./assets/project2.png");
-  background-size: cover;
-}
-
-.project-three {
-  background: url("./assets/project1.jpg");
-  background-size: cover;
-}
-
-.project-four {
-  background: url("./assets/project4.png");
-  background-size: cover;
-}
-
-.project-description {
-  color: white;
-  width: 95%;
-  height: 100%;
-  margin: 0;
-}
-
-.div-project-name-container {
-  padding: 3.5% 2.5%;
-  width: 100%;
-}
-
-.project-name {
-  display: block;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 29px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: white;
-  line-height: -10px;
-  padding: 0;
-  margin: 0 4.7%;
-  border-bottom: 2px double white;
-}
-
-.project-description-span {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 22px;
-  letter-spacing: 0.1em;
-  color: white;
-}
-
-.project-anchors {
-  width: 100%;
-  vertical-align: center;
-}
-
-.project-description a {
-  font-family: 'Cia Code', sans-serif;
-  font-size: 18px;
-  color: white;
-}
-
-.skew-left-y-175 {
-  transform: skew(0, 175deg);
-}
-
-.skew-left-y-178 {
-  transform: skew(0, 178deg);
-}
-.skew-left-y-181 {
-  transform: skew(0, 181deg);
-}
-.skew-left-y-184 {
-  transform: skew(0, 184deg);
-}
-
-.skew-right-y-5 {
-  transform: skew(0, 184deg);
-}
-
-.tooltiptext {
-  top: -5px;
-  left: 105%;
-}
-
-/* Footer style
-
-footer {
-  width: 100%;
-  height: 510px;
-  background-color: #F9CE27;
-  z-index: 3;
-  box-shadow: 0 0 33px rgba(0, 0, 0, 0.48);
-}
-
-.footer-content-wrapper {
-  max-width: 1360px;
-  width: 75%;
-  margin: 0 auto;
-  height: 80%;
-  position: absolute;
-  background-color: transparent;
-  padding: 3% 0;
-}
-
-.footer-content {
-  background-color: transparent;
-  width: 47%;
-  height: 100%;
-}
-
-.user-name {
-  width: 100%;
-  height: 20%;
-}
-
-#footer-span-wrapper {
-  font-family: 'Monoton', cursive;
-  font-size: 42px;
-  line-height: 1.4em;
-  margin: 0 0 0 20px;
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.footer-logo-svg {
-  width: 40px;
-  height: 40px;
-  box-shadow: rgba(0, 0, 0, 0.9) 3px 3px 0px, rgba(0, 0, 0, 0.9) -3px -3px 0px;
-  font-weight: 900;
-  padding: 2px;
-}
-
-.name {
-  width: 50%;
-  height: 100%;
-  background-color: black;
-  color: white;
-  font-family: 'Monoton', cursive;
-  font-size: 28px;
-  padding: 1% 3%;
-}
-
-.lastname {
-  width: 50%;
-  height: 100%;
-  background-color: transparent;
-  color: black;
-  font-family: 'Monoton', cursive;
-  font-size: 28px;
-  padding: 1% 3%;
-}
-
-.developer-image {
-  box-sizing: border-box;
-  width: 100%;
-  height: 70%;
-  background: url("./assets/developer.jpg") no-repeat center center;
-  background-size: cover;
-  border: 6px solid white;
-}
-
-.developer-presentation {
-  margin: 0;
-  width: 260px;
-  height: 387px;
-}
-
-.about-me {
-  font-family: 'Libre Barcode 39 Extended Text', cursive;
-  font-size: 40px;
-  color: black;
-}
-
-.information-contact {
-  width: 100%;
-  height: 100%;
-}
-
-.information-contact p {
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-.description-paragraph {
-  text-align: justify;
-  width: 100%;
-  border-top: 2px double black;
-  border-bottom: 2px double black;
-}
-
-.description-paragraph p {
-  margin: 0;
-}
-
-.social-icons {
-  width: 40px;
-  height: 40px;
-}
-
-.copyright-section {
-  width: 100%;
-  height: 5%;
-  padding-left: 12.5%;
-}
-
-.copyright {
-  font-family: 'Inconsolata', monospace;
-  font-size: small;
-  font-weight: 900;
-}
-*/
-
-@keyframes stars {
-  0% {
-    top: -50%;
-  }
-  100% {
-    top: 110%;
   }
 }
