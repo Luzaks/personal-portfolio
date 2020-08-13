@@ -1,38 +1,34 @@
+#root,
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Me::before,
+.Me::after {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  clip: rect(0, 900px, 0, 0);
+  content: attr(data-text);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Me::after {
+  animation-name: glitch-animation;
+  animation-duration: 4s;
+  left: 7px;
+  text-shadow: -4px 0 #00CCFF;
+  background: black;
+  color: #3d077a;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Me::before {
+  animation-name: glitch-animation-2;
+  animation-duration: 8s;
+  left: -7px;
+  text-shadow: 4px 0 #00FFCC;
+  background: black;
+  color: #3d077a;
 }

@@ -3,7 +3,7 @@ import { Back, Line } from '../../styles/StyledComponents';
 
 const Background = () => {
   return(
-    <Back className="background">
+    <Back>
       <Line className="line" />
       <Line className="line" />
       <Line className="line" />

@@ -3,6 +3,9 @@ import styled, { keyframes } from 'styled-components';
 const Back = styled.div`
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
 `;
 
 const line = keyframes`
@@ -50,9 +53,45 @@ const Line = styled.div`
   }
 `;
 
+const Default = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
+const Head = styled.div`
+  padding: 0 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  min-height: auto;
+`;
+
+const DevName = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+const DevNameCont = styled.div`
+  position: relative;
+  width: fit-content;
+  font-family: 'Navada Outline', cursive;
+  font-size: 30px;
+  letter-spacing: 0.4rem;
+  color: #33CCFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
 export {
   Back,
-  Line
+  Line,
+  Default,
+  Head,
+  DevName,
+  DevNameCont,
 }
