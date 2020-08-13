@@ -1,4 +1,5 @@
 import React from 'react';
+import Scroller from '../scroller/scroller';
 import { PortfolioCont, AboutMeCont } from '../../styles/StyledComponents';
 
 const Portfolio = () => {
@@ -12,6 +13,7 @@ const Portfolio = () => {
           portfolio
         </span>
       </AboutMeCont>
+      <Scroller />
     </PortfolioCont>
   );
 };

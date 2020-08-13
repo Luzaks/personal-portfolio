@@ -132,6 +132,13 @@ const AboutMeCont = styled.div`
   text-align: center;
 `;
 
+const ScrollerCont = styled.div`
+   padding: 2vh 0;
+   pointer-events: none;
+   text-align: center;
+   color: white;
+`;
+
 export {
   Back,
   Line,
@@ -144,4 +151,5 @@ export {
   DevLinksElem,
   PortfolioCont,
   AboutMeCont,
+  ScrollerCont,
 }
