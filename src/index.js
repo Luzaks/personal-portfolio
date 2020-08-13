@@ -1,48 +1,17 @@
-import anime from 'animejs/lib/anime.es.js';
-import rallax from 'rallax.js';
-import AOS from 'aos';
-import lax from 'lax.js'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './styles/index.css';
+import App from './components/App';
+import * as serviceWorker from './serviceWorker';
 
-anime({
-    targets: '.dev-u',
-    rotate: '1turn',
-    duration: 800,
-    scale: 1.1,
-});
-
-anime({
-    targets: '.half-background',
-    border: '100%',
-    easing: 'easeInOutQuad',
-    direction: 'alternate',
-    loop: true
-});
-
-anime({
-    targets: '.small-scale',
-    scale: 0.8
-});
-
-const target = document.querySelector('.parallax');
-
-const parallax = rallax(target, { speed: 0.5 });
-parallax.when(
-    () => window.scrollY > 1000,
-    () => parallax.stop()
-).when(
-    () => window.scrollY < 1000,
-    () => parallax.start()
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
-AOS.init();
-
-window.onload = function() {
-    lax.setup();
-
-    const updateLax = () => {
-        lax.update(window.scrollY);
-        window.requestAnimationFrame(updateLax)
-    };
-
-    window.requestAnimationFrame(updateLax)
-};
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
