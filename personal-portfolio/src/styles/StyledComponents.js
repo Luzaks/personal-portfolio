@@ -56,6 +56,9 @@ const Line = styled.div`
 const Default = styled.div`
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
 `;
 
 const Head = styled.div`
@@ -87,6 +90,31 @@ const DevNameCont = styled.div`
   align-items: center;
 `;
 
+const DevLinks = styled.div`
+  width: 50%;
+`;
+
+const DevUl = styled.ul`
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const DevLinksElem = styled.div`
+  width: fit-content;
+  margin: 0 15px;
+  align-items: center;
+  font-size: 14px;
+  color: #d2d13e;
+  display: inline-flex;
+  &:hover {
+    font-size: 12px;
+    cursor: pointer;
+  }
+`;
+
 export {
   Back,
   Line,
@@ -94,4 +122,7 @@ export {
   Head,
   DevName,
   DevNameCont,
+  DevLinks,
+  DevUl,
+  DevLinksElem,
 }

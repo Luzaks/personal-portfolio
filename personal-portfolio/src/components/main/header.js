@@ -2,7 +2,10 @@ import React from 'react';
 import { 
   Head,
   DevName,
-  DevNameCont, } from '../../styles/StyledComponents';
+  DevNameCont,
+  DevLinks,
+  DevUl,
+  DevLinksElem, } from '../../styles/StyledComponents';
 
 const Header = () => {
   return(
@@ -12,6 +15,19 @@ const Header = () => {
           <span className="Me" data-text="LUZAKS">LUZAKS</span>
         </DevNameCont>
       </DevName>
+      <DevLinks>
+        <DevUl>
+          <DevLinksElem>
+            ABOUT
+          </DevLinksElem>
+          <DevLinksElem>
+            WORK
+          </DevLinksElem>    
+          <DevLinksElem>
+            CONTACT
+          </DevLinksElem>  
+        </DevUl>
+      </DevLinks>
     </Head>
   );
 };
