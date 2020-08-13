@@ -12,7 +12,7 @@ const Header = () => {
     <Head>
       <DevName>
         <DevNameCont>
-          <span className="Me" data-text="LUZAKS">LUZAKS</span>
+          <span className="Me" data-text="LUZAKS">Guadalupe Rangel</span>
         </DevNameCont>
       </DevName>
       <DevLinks>

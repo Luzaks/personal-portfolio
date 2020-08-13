@@ -55,7 +55,7 @@ const Line = styled.div`
 
 const Default = styled.div`
   width: 100%;
-  height: 100%;
+  height: 1000vh;
   position: absolute;
   z-index: 1;
   top: 0;
@@ -82,7 +82,7 @@ const DevNameCont = styled.div`
   position: relative;
   width: fit-content;
   font-family: 'Navada Outline', cursive;
-  font-size: 30px;
+  font-size: 14px;
   letter-spacing: 0.4rem;
   color: #33CCFF;
   display: flex;
@@ -115,6 +115,23 @@ const DevLinksElem = styled.div`
   }
 `;
 
+const PortfolioCont = styled.div`
+  width: 100%;
+  height: calc(100% - 72px)
+`;
+const AboutMeCont = styled.div`
+  width: 100%;
+  padding: 0 40px;
+  height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  color: white;
+  text-align: center;
+`;
+
 export {
   Back,
   Line,
@@ -125,4 +142,6 @@ export {
   DevLinks,
   DevUl,
   DevLinksElem,
+  PortfolioCont,
+  AboutMeCont,
 }
