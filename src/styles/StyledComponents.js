@@ -138,15 +138,8 @@ const ScrollerCont = styled.div`
    text-align: center;
    color: white;
    position: relative;
-`;
-
-const ProjectNumber = styled.h1`
-  margin-top: 360px;
-  font-size: 40px;
-  position: relative;
-  width: fit-content;
-  left: 24%;
-  z-index: 3;
+  font-family: HenrietteSignature, sans-serif;
+  font-size: 70px;
 `;
 
 const ImageContainer = styled.div`
@@ -174,6 +167,5 @@ export {
   PortfolioCont,
   AboutMeCont,
   ScrollerCont,
-  ProjectNumber,
   ImageContainer,
 }

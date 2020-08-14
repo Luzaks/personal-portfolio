@@ -3,7 +3,7 @@ import { Parallax } from 'react-scroll-parallax';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import images from '../../images/images';
-import { ScrollerCont, ImageContainer, ProjectNumber } from '../../styles/StyledComponents';
+import { ScrollerCont, ImageContainer } from '../../styles/StyledComponents';
 
 const Scroller = () => {
   useEffect(() => {
@@ -15,7 +15,7 @@ const Scroller = () => {
       <ScrollerCont >
         {images.map((image, index) => (
           <>
-          <Parallax className="project-number-parallax" y={[-100, 100]} tagOuter="figure">
+          <Parallax className="project-number-parallax" y={[-50, 200]} tagOuter="figure">
             {`0${index+1}`}
           </Parallax>
             <ImageContainer key={index} >

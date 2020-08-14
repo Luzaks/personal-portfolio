@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'HenrietteSignature';
+  src:
+      local('NavadaOutline'),
+      url('../assets/ttf/NavadaOutline.ttf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -57,9 +64,9 @@ html.has-scroll-dragging {
 
 .project-number-parallax {
   margin-top: 360px;
-  font-size: 40px;
   position: relative;
   width: fit-content;
-  left: 23%;
+  left: 18%;
+  transition: all 5ms ease-in-out;
   z-index: 3;
 }
