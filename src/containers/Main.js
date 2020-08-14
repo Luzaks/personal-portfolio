@@ -4,6 +4,7 @@ import Portfolio from '../components/main/portfolio';
 import { Default } from '../styles/StyledComponents';
 
 const Main = () => {
+
   return(
     <Default>
       <Header />

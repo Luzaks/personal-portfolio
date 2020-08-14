@@ -132,11 +132,18 @@ const AboutMeCont = styled.div`
   text-align: center;
 `;
 
+const ScrollApp = styled.div`
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+`;
+
 const ScrollerCont = styled.div`
    padding: 2vh 0;
    pointer-events: none;
    text-align: center;
    color: white;
+   position: relative;
 `;
 
 export {
@@ -151,5 +158,6 @@ export {
   DevLinksElem,
   PortfolioCont,
   AboutMeCont,
+  ScrollApp,
   ScrollerCont,
 }
