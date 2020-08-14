@@ -20,7 +20,7 @@ const line = keyframes`
 const Line = styled.div`
   position: absolute;
   width: 1px;
-  height: 1100vh;
+  height: 2000vh;
   top: 0;
   left: 50%;
   background: rgba(255, 255, 255, 0.1);

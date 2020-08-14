@@ -14,7 +14,7 @@
 html,
 body {
   width: 100%;
-  height: 1100vh;
+  height: 2000vh;
   background-color: black;
 }
 
@@ -63,10 +63,10 @@ html.has-scroll-dragging {
   cursor: grabbing; }
 
 .project-number-parallax {
-  margin-top: 70%;
+  margin-top: 50%;
   position: relative;
   width: fit-content;
-  left: 13%;
+  left: 10%;
   transition: all 5ms ease-in-out;
   z-index: 3;
 }
