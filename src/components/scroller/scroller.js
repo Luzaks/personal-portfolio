@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react';
+import { Parallax } from 'react-scroll-parallax';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import images from '../../images/images';
-import { ScrollerCont } from '../../styles/StyledComponents';
+import { ScrollerCont, ImageContainer, ProjectNumber } from '../../styles/StyledComponents';
 
 const Scroller = () => {
   useEffect(() => {
@@ -14,16 +15,14 @@ const Scroller = () => {
       <ScrollerCont >
         {images.map((image, index) => (
           <>
-            <div key={index} className='img-container'>
+          <Parallax className="project-number-parallax" y={[-100, 100]} tagOuter="figure">
+            {`0${index+1}`}
+          </Parallax>
+            <ImageContainer key={index} >
               <img
-                  data-aos="fade-up"
-                  data-aos-mirror="true"
                   src={image}
                   alt={`project ${index}`} />
-            </div>
-            <h2>
-              Skew <span className='outline'>Scrolling</span>
-            </h2>
+            </ImageContainer>
           </>
         ))}
       </ScrollerCont>

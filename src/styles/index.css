@@ -54,3 +54,12 @@ html.has-scroll-dragging {
 .has-scroll-dragging .c-scrollbar_thumb {
   cursor: -webkit-grabbing;
   cursor: grabbing; }
+
+.project-number-parallax {
+  margin-top: 360px;
+  font-size: 40px;
+  position: relative;
+  width: fit-content;
+  left: 23%;
+  z-index: 3;
+}

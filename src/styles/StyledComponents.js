@@ -132,17 +132,33 @@ const AboutMeCont = styled.div`
   text-align: center;
 `;
 
-const ScrollApp = styled.div`
-  width: 100%;
-  height: 100vh;
-`;
-
 const ScrollerCont = styled.div`
    padding: 2vh 0;
    pointer-events: none;
    text-align: center;
    color: white;
    position: relative;
+`;
+
+const ProjectNumber = styled.h1`
+  margin-top: 360px;
+  font-size: 40px;
+  position: relative;
+  width: fit-content;
+  left: 24%;
+  z-index: 3;
+`;
+
+const ImageContainer = styled.div`
+  width: 700px;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto 400px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
 `;
 
 export {
@@ -157,6 +173,7 @@ export {
   DevLinksElem,
   PortfolioCont,
   AboutMeCont,
-  ScrollApp,
   ScrollerCont,
+  ProjectNumber,
+  ImageContainer,
 }

@@ -33,17 +33,6 @@
   color: #3d077a;
 }
 
-.img-container {
-  width: 700px;
-  height: 420px;
-  overflow: hidden;
-  position: relative;
-  margin: 400px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .img-container:nth-child(1) {
    margin-top: 200px;
  }
