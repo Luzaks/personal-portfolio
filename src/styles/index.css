@@ -63,10 +63,15 @@ html.has-scroll-dragging {
   cursor: grabbing; }
 
 .project-number-parallax {
-  margin-top: 360px;
+  margin-top: 70%;
   position: relative;
   width: fit-content;
-  left: 18%;
+  left: 13%;
   transition: all 5ms ease-in-out;
   z-index: 3;
+}
+
+.image-parallax {
+  position: relative;
+  z-index: 4;
 }

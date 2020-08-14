@@ -127,31 +127,30 @@ const AboutMeCont = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
   color: white;
   text-align: center;
 `;
 
 const ScrollerCont = styled.div`
-   padding: 2vh 0;
-   pointer-events: none;
-   text-align: center;
-   color: white;
-   position: relative;
+  padding: 2vh 0;
+  pointer-events: none;
+  text-align: center;
+  color: grey;
+  position: relative;
   font-family: HenrietteSignature, sans-serif;
-  font-size: 70px;
+  font-size: 120px;
 `;
 
 const ImageContainer = styled.div`
-  width: 700px;
-  height: 420px;
+  width: 750px;
+  height: 470px;
   overflow: hidden;
   position: relative;
   margin: 0 auto 400px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  z-index: 4;
 `;
 
 export {

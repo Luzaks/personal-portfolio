@@ -13,16 +13,18 @@ const Scroller = () => {
   }, []);
     return(
       <ScrollerCont >
-        {images.map((image, index) => (
+        {images.map((image) => (
           <>
-          <Parallax className="project-number-parallax" y={[-50, 200]} tagOuter="figure">
-            {`0${index+1}`}
+          <Parallax className="project-number-parallax" y={[-40, 300]} tagOuter="figure">
+            {image.name}
           </Parallax>
-            <ImageContainer key={index} >
+          <Parallax className="image-parallax" y={[100, 50]} tagOuter="figure">
+            <ImageContainer key={image.name} >
               <img
-                  src={image}
-                  alt={`project ${index}`} />
+                  src={image.image}
+                  alt={`project ${image.name}`} />
             </ImageContainer>
+          </Parallax>
           </>
         ))}
       </ScrollerCont>
