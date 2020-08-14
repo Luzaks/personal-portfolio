@@ -135,7 +135,6 @@ const AboutMeCont = styled.div`
 const ScrollApp = styled.div`
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 `;
 
 const ScrollerCont = styled.div`
