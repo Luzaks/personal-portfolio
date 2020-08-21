@@ -1,6 +1,6 @@
 # Luzaks Portfolio.
 
-In this repository you can find a summary of my personal built projects, my style of coding, my favorites stack, and in general, you will know me as a developer.
+In this repository you can find a summary of my personal built projects, my style of coding, my favorites stacks, and in general, you will know me as a developer.
 
 Please enjoy the visit, navigate through the live demo, and wait for more, in the future definitely you will find more interesting things to see and play.
 
@@ -9,7 +9,8 @@ Thanks for comming.
 ## Preview
 
 <div align="center"><img src="./src/assets/imgs/portfolio.png" alt="portfolio-sample"></div>
-<div align="center">[Live Demo](https://luzaks.netlify.app/)</div>
+
+[<p align="center">Live Version</p>](https://luzaks.netlify.app/)
 
 ## Getting started
 
