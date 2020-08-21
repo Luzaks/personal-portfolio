@@ -6,7 +6,7 @@ import lerp from 'lerp';
 import { Text } from './components/Text';
 import Plane from './components/Plane';
 import { Block, useBlock } from './blocks';
-import state from './store';
+import state from './store/store';
 import './styles.css';
 
 function Startup() {
