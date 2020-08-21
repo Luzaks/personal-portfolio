@@ -42,41 +42,41 @@ class CustomMaterial extends ShaderMaterial {
   }
 
   set scale(value) {
-    this.uniforms.scale.value = value
+    this.uniforms.scale.value = value;
   }
 
   get scale() {
-    return this.uniforms.scale.value
+    return this.uniforms.scale.value;
   }
 
   set shift(value) {
-    this.uniforms.shift.value = value
+    this.uniforms.shift.value = value;
   }
 
   get shift() {
-    return this.uniforms.shift.value
+    return this.uniforms.shift.value;
   }
 
   set map(value) {
-    this.uniforms.hasTexture.value = !!value
-    this.uniforms.texture.value = value
+    this.uniforms.hasTexture.value = !!value;
+    this.uniforms.texture.value = value;
   }
 
   get map() {
-    return this.uniforms.texture.value
+    return this.uniforms.texture.value;
   }
 
   get color() {
-    return this.uniforms.color.value
+    return this.uniforms.color.value;
   }
 
   get opacity() {
-    return this.uniforms.opacity.value
+    return this.uniforms.opacity.value;
   }
 
   set opacity(value) {
-    if (this.uniforms) this.uniforms.opacity.value = value
+    if (this.uniforms) this.uniforms.opacity.value = value;
   }
 }
 
-extend({ CustomMaterial })
+extend({ CustomMaterial });
