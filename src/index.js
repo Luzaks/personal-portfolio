@@ -7,7 +7,7 @@ import { Text } from './components/Text';
 import Plane from './components/Plane';
 import { Block, useBlock } from './blocks';
 import state from './store/store';
-import './styles.css';
+import './styles/styles.css';
 
 function Startup() {
     const ref = useRef();
@@ -60,7 +60,7 @@ function Content() {
                     </Text>
                 </Block>
                 <Block factor={1.0}>
-                    <Dom position={[-w / 3.2, -w * 0.08 + 0.25, -1]}>It was the year 2076.{mobile ? <br /> : " "}The substance had arrived.</Dom>
+                    <Dom position={[-w / 4.5, -w * 0.08 + 0.25, -1]}>FULL STACK DEVELOPER{mobile ? <br /> : " "}PORTFOLIO</Dom>
                 </Block>
             </Block>
             <Block factor={1.2} offset={6}>
@@ -68,7 +68,7 @@ function Content() {
                     hello color="#2fe8c3"
                 </Dom>
                 <Dom className="bottom-left" position={[-canvasWidth / 2, -canvasHeight / 2, 0]}>
-                    Culture is not your friend.
+                    Hay que realizar todos tus sueños.
                 </Dom>
             </Block>
             <Block factor={1.4} offset={7}>
@@ -108,14 +108,14 @@ function App() {
             <div className="frame">
                 <h1 className="frame__title">Guadalupe Rangel</h1>
                 <div className="frame__links">
-                    <a className="frame__link" href="http://tympanus.net/Tutorials/PhysicsMenu/">
-                        Previous demo
+                    <a className="frame__link" href="https://github.com/Luzaks/">
+                        some link
                     </a>
-                    <a className="frame__link" href="https://tympanus.net/codrops/?p=45441">
-                        Article
+                    <a className="frame__link" href="https://github.com/Luzaks/">
+                        some link
                     </a>
-                    <a className="frame__link" href="https://github.com/drcmda/the-substance">
-                        GitHub
+                    <a className="frame__link" href="https://github.com/Luzaks/">
+                        some link
                     </a>
                 </div>
                 <div className="frame__nav">

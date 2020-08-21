@@ -3,7 +3,7 @@ import React, { useCallback, useRef } from 'react';
 import { useLoader, useFrame } from 'react-three-fiber';
 import usePromise from 'react-promise-suspense';
 import lerp from 'lerp';
-import state from '../store';
+import state from '../store/store';
 
 function Text({ children, size = 1, left, right, top, bottom, color = "white", opacity = 1, height = 0.01, layers = 0, font = "/MOONGET_Heavy.blob", ...props }) {
   const data = useLoader(FontLoader, font);

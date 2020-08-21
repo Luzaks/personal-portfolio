@@ -3,7 +3,7 @@ import { useFrame } from 'react-three-fiber';
 import lerp from 'lerp';
 import './CustomMaterial';
 import { useBlock } from '../blocks';
-import state from '../store';
+import state from '../store/store';
 
 const Plane = forwardRef(({ color = 'white', shift = 1, opacity = 1, args, map, ...props }, ref) => {
   const { viewportHeight, offsetFactor } = useBlock();
