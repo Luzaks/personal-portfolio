@@ -1,7 +1,8 @@
+import React, {useMemo} from 'react';
 import {Dom, useLoader} from 'react-three-fiber';
 import {LinearFilter, TextureLoader} from 'three';
+import Paragraph from './Paragraph';
 import state from '../store/store';
-import React, {useMemo} from 'react';
 import {Block, useBlock} from '../blocks';
 import {Text} from './Text';
 import Plane from './Plane';
