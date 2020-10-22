@@ -1,0 +1,50 @@
+#root,
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+.Me::before,
+.Me::after {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  clip: rect(0, 900px, 0, 0);
+  content: attr(data-text);
+}
+
+.Me::after {
+  animation-name: glitch-animation;
+  animation-duration: 4s;
+  left: 7px;
+  text-shadow: -4px 0 #00CCFF;
+  background: black;
+  color: #3d077a;
+}
+.Me::before {
+  animation-name: glitch-animation-2;
+  animation-duration: 8s;
+  left: -7px;
+  text-shadow: 4px 0 #00FFCC;
+  background: black;
+  color: #3d077a;
+}
+
+.img-container:nth-child(1) {
+   margin-top: 200px;
+ }
+.img-container:last-child {
+   margin-bottom: 200px;
+ }
+@media (max-width: 480px) {
+  .img-container {
+    width: 95%;
+  }
+}
+img {
+  width: 100%;
+  position: absolute;
+}

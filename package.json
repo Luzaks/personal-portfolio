@@ -1,38 +1,37 @@
 {
   "name": "personal-portfolio",
-  "version": "1.0.0",
-  "description": "In this project I have all my projects as web-developer",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Luzaks/personal-portfolio.git"
-  },
-  "keywords": [
-    "portfolio",
-    "web-development",
-    "web-design",
-    "front-end",
-    "back-end"
-  ],
-  "author": "Guadalupe Rangel <kanemekanik@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Luzaks/personal-portfolio/issues"
-  },
-  "homepage": "https://github.com/Luzaks/personal-portfolio#readme",
-  "devDependencies": {
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
-  },
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "animate.css": "^4.1.0",
-    "animejs": "^3.2.0",
-    "aos": "^3.0.0-beta.6",
-    "lax.js": "^1.2.5",
-    "rallax.js": "^2.0.4"
+    "lerp": "1.0.3",
+    "react": "experimental",
+    "react-dom": "experimental",
+    "react-scripts": "3.2.0",
+    "react-three-fiber": "4.0.0-beta.12",
+    "three": "0.111.0"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
