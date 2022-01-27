@@ -8,7 +8,7 @@
     "react-dom": "experimental",
     "react-scripts": "3.2.0",
     "react-three-fiber": "4.0.0-beta.12",
-    "three": "0.111.0"
+    "three": "0.137.0"
   },
   "devDependencies": {
     "typescript": "3.3.3"
