@@ -6,7 +6,7 @@
     "lerp": "1.0.3",
     "react": "experimental",
     "react-dom": "experimental",
-    "react-scripts": "3.2.0",
+    "react-scripts": "5.0.1",
     "react-three-fiber": "4.0.0-beta.12",
     "three": "0.111.0"
   },
